@@ -1,0 +1,55 @@
+[   +8 ms] executing: [/home/toor/flutter/] git -c log.showSignature=false log -n 1 --pretty=format:%H
+[  +24 ms] Exit code 0 from: git -c log.showSignature=false log -n 1 --pretty=format:%H
+[        ] 8fe7655ed20ffd1395f68e30539a847a01a30351
+[        ] executing: [/home/toor/flutter/] git tag --contains HEAD
+[ +155 ms] Exit code 0 from: git tag --contains HEAD
+[        ] 1.19.0-4.3.pre
+[   +7 ms] executing: [/home/toor/flutter/] git rev-parse --abbrev-ref --symbolic @{u}
+[   +3 ms] Exit code 0 from: git rev-parse --abbrev-ref --symbolic @{u}
+[        ] origin/beta
+[        ] executing: [/home/toor/flutter/] git ls-remote --get-url origin
+[   +3 ms] Exit code 0 from: git ls-remote --get-url origin
+[        ] https://github.com/flutter/flutter.git
+[  +54 ms] executing: [/home/toor/flutter/] git rev-parse --abbrev-ref HEAD
+[   +4 ms] Exit code 0 from: git rev-parse --abbrev-ref HEAD
+[        ] beta
+[  +33 ms] Artifact Instance of 'AndroidMavenArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +10 ms] executing: /home/toor/Android/Sdk/platform-tools/adb devices -l
+[  +38 ms] List of devices attached
+[   +5 ms] Artifact Instance of 'AndroidMavenArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +47 ms] Running "flutter pub get" in world_time...
+[   +2 ms] Using /home/toor/flutter/.pub-cache for the pub cache.
+[        ] executing: [/home/toor/AndroidStudioProjects/world_time/] /home/toor/flutter/bin/cache/dart-sdk/bin/pub --verbose get --no-precompile
+[  +54 ms] MSG : Resolving dependencies...
+[        ] MSG : Got dependencies!
+[  +23 ms] Running "flutter pub get" in world_time... (completed in 0.5s)
+[ +120 ms] Generating /home/toor/AndroidStudioProjects/world_time/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+[  +42 ms] Launching lib/main.dart on Web Server in release mode...
+[  +61 ms] Generating /home/toor/AndroidStudioProjects/world_time/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+[   +2 ms] Compiling lib/main.dart for the Web...
+[   +9 ms] Initializing file store
+[  +13 ms] Skipping target: gen_localizations
+[   +9 ms] web_entrypoint: Starting due to {InvalidatedReason.inputChanged}
+[   +3 ms] web_entrypoint: Complete
+[   +1 ms] dart2js: Starting due to {}
