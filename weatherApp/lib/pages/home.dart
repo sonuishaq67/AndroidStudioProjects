@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -28,42 +29,74 @@ class _HomeState extends State<Home> {
     List<City> citylist = data['citylist'];
     print(citylist.length);
     return Scaffold(
-      backgroundColor: Colors.cyanAccent,
+      backgroundColor: Colors.grey[700],
       appBar: AppBar(
-        backgroundColor: Colors.cyan,
-        title: Text('Cloud'),
+        backgroundColor: Colors.grey[900],
+        title: Text(
+          'SenseWeather',
+          style: TextStyle(
+            fontFamily: 'KronaOne',
+            fontWeight: FontWeight.w400,
+            fontSize: 28.0,
+          ),
+        ),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Container(
-            padding: EdgeInsets.all(10), // ishaq lol
-            child: TextFormField(
-              controller: myController,
-              decoration: InputDecoration(
-                labelText: 'Enter an area name',
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 125, 10, 15),
+              child: TextFormField(
+                controller: myController,
+                textCapitalization: TextCapitalization.sentences,
+                cursorColor: Colors.white,
+                decoration: InputDecoration(
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  hintText: "<Your location>",
+                  hoverColor: Colors.white,
+                  labelText: 'Enter an area name',
+                  labelStyle: TextStyle(color: Colors.grey[900], fontSize: 25),
+                  contentPadding: EdgeInsets.fromLTRB(10, 20, 10, 10),
+                ),
               ),
             ),
-          ),
-          FlatButton.icon(
-            onPressed: () async {
-              value = myController.text;
-              print(value);
-              response = await http.get(
-                  'http://api.openweathermap.org/data/2.5/weather?q=$value&units=metric&appid=your-app-id');
-              datanew = jsonDecode(response.body);
-              Navigator.pushNamed(
-                context,
-                '/display',
-                arguments: {
-                  'datanew': datanew,
-                },
-              );
-            },
-            icon: Icon(Icons.search),
-            label: Text('Get results'),
-          ),
-        ],
+            FlatButton.icon(
+              onPressed: () async {
+                Container(
+                  child: Text('doing it '),
+                );
+                value = myController.text;
+                print(value);
+                response = await http.get(
+                    'http://api.openweathermap.org/data/2.5/weather?q=$value&units=metric&appid=your-app-id');
+                datanew = jsonDecode(response.body);
+                Navigator.pushNamed(
+                  context,
+                  '/display',
+                  arguments: {
+                    'datanew': datanew,
+                  },
+                );
+              },
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              label: Text(
+                'Get results',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
