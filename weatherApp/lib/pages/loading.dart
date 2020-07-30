@@ -33,9 +33,9 @@ class _LoadingState extends State<Loading> {
           child: Column(
             children: [
               Image.asset('assets/SenseWeather.png'),
-              SpinKitRing(
+              SpinKitDoubleBounce(
                 color: Colors.white,
-                size: 30.0,
+                size: 35.0,
               )
             ],
           ),

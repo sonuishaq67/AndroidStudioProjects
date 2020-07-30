@@ -28,14 +28,16 @@ class _HomeState extends State<Home> {
     List<City> citylist = data['citylist'];
     print(citylist.length);
     return Scaffold(
+      backgroundColor: Colors.cyanAccent,
       appBar: AppBar(
+        backgroundColor: Colors.cyan,
         title: Text('Cloud'),
         centerTitle: true,
       ),
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+            padding: EdgeInsets.all(10), // ishaq lol
             child: TextFormField(
               controller: myController,
               decoration: InputDecoration(
