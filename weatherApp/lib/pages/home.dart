@@ -68,9 +68,6 @@ class _HomeState extends State<Home> {
             ),
             FlatButton.icon(
               onPressed: () async {
-                Container(
-                  child: Text('doing it '),
-                );
                 value = myController.text;
                 print(value);
                 response = await http.get(
