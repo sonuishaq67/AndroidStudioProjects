@@ -17,7 +17,6 @@ class _HomeState extends State<Home> {
   http.Response response;
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     myController.dispose();
     super.dispose();
   }
