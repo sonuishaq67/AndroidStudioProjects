@@ -12,7 +12,7 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 
 apps:
   world-time-app:
-    command: world-time-app
+    command: world_time
     extensions: [flutter-master] # Where "master" defines which Flutter channel to use for the build
     plugs:
     - network
