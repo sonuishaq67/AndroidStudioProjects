@@ -17,6 +17,7 @@ class _HomeState extends State<Home> {
   http.Response response;
   @override
   void dispose() {
+    // Clean up the controller when the widget is disposed.
     myController.dispose();
     super.dispose();
   }
@@ -67,6 +68,9 @@ class _HomeState extends State<Home> {
             ),
             FlatButton.icon(
               onPressed: () async {
+                Container(
+                  child: Text('doing it '),
+                );
                 value = myController.text;
                 print(value);
                 response = await http.get(
