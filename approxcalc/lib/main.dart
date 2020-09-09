@@ -10,17 +10,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  double z=log(10);
+  double z=10;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: new Scaffold(
         appBar: AppBar(title: Text('x'),),
-        body: Container(
-          child: FlatButton.icon(
-            onPressed: (){
-
-            },
+        body: Center(
+          child: Container(
+            child: FlatButton(
+              child: Text(
+                "${log(z)}",
+              ),
+              onPressed: (){
+                  setState(() {
+                    z=z*10;
+                  });
+              },
+            ),
           ),
         ),
       ),
