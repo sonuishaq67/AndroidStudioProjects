@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:weatherApp/services/City.dart';
-import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 class Home extends StatefulWidget {
   @override
